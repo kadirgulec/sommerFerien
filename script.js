@@ -6,4 +6,4 @@ dayDifference = dayDifference.toFixed(0);
 console.log(dayDifference );
 
 let tag = document.querySelector(".tag");
-tag.innerHTML = dayDifference + " Tags zu Sommerferien";
+tag.innerHTML = dayDifference + "<br> Tags zu <br>Sommerferien";
