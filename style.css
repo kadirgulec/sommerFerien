@@ -1,0 +1,12 @@
+main{
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tag{
+    font-size: 7em;
+    border: 2px solid black;
+    text-align: center;
+}
