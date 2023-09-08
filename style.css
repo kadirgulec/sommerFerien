@@ -1,11 +1,10 @@
 main{
-    height: 98vh;
-    width: 98vw;
     display: flex;
+    flex-direction: column;
+    height: 98vh;
     justify-content: center;
     align-items: center;
 }
-.tag{
-    font-size: 7em;
-    text-align: center;
+div{
+    margin: 5vh;
 }
