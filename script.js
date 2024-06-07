@@ -13,26 +13,34 @@ tag.innerHTML = dayDifference + "<br> Tagen <br><br>" + wochen + "<br> Wochen"; 
 
 
 function daysOfYear(date){
-var now = new Date(date);
-var start = new Date(now.getFullYear(), 0, 0);
-var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
-var oneDay = 1000 * 60 * 60 * 24;
-var day = Math.floor(diff / oneDay);
-return day
+    var now = new Date(date);
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+    var oneDay = 1000 * 60 * 60 * 24;
+    var day = Math.floor(diff / oneDay);
+    return day
 }
 function daysOfYearToday(){
-var now = new Date();
-var start = new Date(now.getFullYear(), 0, 0);
-var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
-var oneDay = 1000 * 60 * 60 * 24;
-var day = Math.floor(diff / oneDay);
-return day
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+    var oneDay = 1000 * 60 * 60 * 24;
+    var day = Math.floor(diff / oneDay);
+    return day
 }
-elif = daysOfYear("10/01/2014") - daysOfYearToday();
-
+function remainingDays(date){
+    let remainingDays = daysOfYear(date) - daysOfYearToday();
+    remainingDays < 0 ? remainingDays = 365 + remainingDays : remainingDays;
+    return remainingDays
+}
+elif = remainingDays("10/01/2014");
 let elifRemaining = document.querySelector("#elifRemainingDays");
 elifRemaining.textContent = `${elif}`;
 
-hilal = daysOfYear("11/18/2015") - daysOfYearToday();
+hilal = remainingDays("11/18/2015");
 let hilalRemaining  = document.querySelector("#hilalRemainingDays");
-hilalRemaining.textContent = `${hilal}`
+hilalRemaining.textContent = `${hilal}`;
+
+kaan = remainingDays("11/09/2017") ;
+let kaanRemaining  = document.querySelector("#kaanRemainingDays");
+kaanRemaining.textContent = `${kaan}`;
