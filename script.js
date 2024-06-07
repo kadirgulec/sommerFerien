@@ -33,14 +33,22 @@ function remainingDays(date){
     remainingDays < 0 ? remainingDays = 365 + remainingDays : remainingDays;
     return remainingDays
 }
-elif = remainingDays("10/01/2014");
+let elif = remainingDays("10/01/2014");
 let elifRemaining = document.querySelector("#elifRemainingDays");
 elifRemaining.textContent = `${elif}`;
 
-hilal = remainingDays("11/18/2015");
+let hilal = remainingDays("11/18/2015");
 let hilalRemaining  = document.querySelector("#hilalRemainingDays");
 hilalRemaining.textContent = `${hilal}`;
 
-kaan = remainingDays("11/09/2017") ;
+let kaan = remainingDays("09/11/2017") ;
 let kaanRemaining  = document.querySelector("#kaanRemainingDays");
 kaanRemaining.textContent = `${kaan}`;
+
+let tr = remainingDays("06/14/2024") ;
+let trRemaining  = document.querySelector("#trRemainingDays");
+trRemaining.textContent = `${tr}`;
+
+let de = remainingDays("07/05/2017") ;
+let deRemaining  = document.querySelector("#deRemainingDays");
+deRemaining.textContent = `${de}`;
